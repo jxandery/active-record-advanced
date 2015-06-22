@@ -1,0 +1,7 @@
+<h2>Nicely done! <%= @message %></h2>
+
+<% @images.each do |image| %>
+  <p>
+    <%= image_tag image.url %>
+  </p>
+<% end %>
