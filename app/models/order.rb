@@ -9,7 +9,9 @@ class Order < ActiveRecord::Base
     # Improve this to use ActiveRecord instead of Ruby
     # The final implementation should allow ActiveRecord chaining
 
-    all.sort_by { |order| order.created_at }.last(10).reverse
+    #all.sort_by { |order| order.created_at }.last(10).reverse
+
+    order(created_at: :desc).limit(10)
   end
 
   def self.largest

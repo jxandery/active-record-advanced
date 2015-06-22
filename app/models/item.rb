@@ -19,9 +19,8 @@ class Item < ActiveRecord::Base
 
   def self.ordered
     # Hint: joins is your friend.
-    orders = Order.all
-    items = orders.flat_map do |order|
-      order.items
-    end.uniq
+
+    require "pry"; binding.pry
+    orders = Order.includes(:items).all
   end
 end

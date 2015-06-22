@@ -23,4 +23,5 @@ group :development, :test do
   gem 'bullet'
   gem 'capybara'
   gem 'byebug'
+  gem 'pry'
 end
